@@ -1,0 +1,81 @@
+
+    body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Estilos para el contenedor de contenido */
+    #contenido {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Estilos  para el formulario */
+    #formulario {
+        flex: 1;
+        background-color: white;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+
+    }
+
+    /* Estilos para el texto "¿Cómo se calcula?" */
+    #texto {
+        flex: 1;
+        background-color:  #DC143C; 
+        padding: 15px;
+        color: white;
+        border-radius: 8px;
+    }
+
+#texto ul li {
+    margin-bottom: 8px; 
+}
+
+#formulario input {
+    margin-bottom: 10px; 
+    margin-top: 10px;
+    width: 100%; 
+    margin-bottom: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 8px; 
+    box-sizing: border-box; 
+}
+#formulario input[type="submit"] {
+    background-color: #DC143C; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    padding: 10px; 
+    cursor: pointer; 
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#formulario label  {
+    display: block;
+    text-align: center;
+}
+
+#formulario br {
+    display: none; /* Ocultar el salto de línea para evitar espacios adicionales */
+}
+#resultadoHidratacion, #resultadoSuperficieCorporal {
+    font-weight: bold;
+    font-family: "sans-serif";
+    color: blue;
+    font-size: 1.2em; 
+}
+
