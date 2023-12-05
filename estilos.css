@@ -8,7 +8,6 @@
         height: 100vh;
     }
 
-    /* Estilos para el contenedor de contenido */
     #contenido {
         max-width: 800px;
         margin: 20px auto;
@@ -19,8 +18,6 @@
         border-radius: 8px;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
     }
-
-    /* Estilos  para el formulario */
     #formulario {
         flex: 1;
         background-color: white;
@@ -29,8 +26,6 @@
         border-radius: 8px;
 
     }
-
-    /* Estilos para el texto "¿Cómo se calcula?" */
     #texto {
         flex: 1;
         background-color:  #DC143C; 
@@ -70,7 +65,7 @@
 }
 
 #formulario br {
-    display: none; /* Ocultar el salto de línea para evitar espacios adicionales */
+    display: none; 
 }
 #resultadoHidratacion, #resultadoSuperficieCorporal {
     font-weight: bold;
