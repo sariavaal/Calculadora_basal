@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let superficie = ((peso * 4) + 7) / (peso + 90);
         let opcion1 = superficie * 1500;
         let opcion2 = superficie * 2000;
-        alert("Superficie Corporal por 1500 " + Math.round(opcion1) + " cc" + "\n" + "Superficie Corporal por 2000: " + Math.round(opcion2) + " cc");
+        alert("Superficie Corporal por 1500: " + Math.round(opcion1) + " cc" + "\n" + "Superficie Corporal por 2000: " + Math.round(opcion2) + " cc");
     }
 
 });
