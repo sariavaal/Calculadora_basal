@@ -1,7 +1,7 @@
 
     body {
         background-color: #f0f0f0;
-        font-family: Arial, sans-serif;
+        font-family: Arial, sans-serif; 
         margin: 0;
         display: flex;
         align-items: center;
@@ -17,6 +17,10 @@
         display: flex;
         border-radius: 8px;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        
+    }
+    #contenido h1{
+        text-transform: uppercase;
     }
     #formulario {
         flex: 1;
@@ -39,7 +43,7 @@
 }
 
 #formulario input {
-    margin-bottom: 10px; 
+    margin-bottom: 20px; 
     margin-top: 10px;
     width: 100%; 
     margin-bottom: 8px; 
@@ -74,3 +78,29 @@
     font-size: 1.2em; 
 }
 
+/* para moviles */
+@media only screen and (max-width: 600px) {
+    body {
+        margin-top: 0;
+        height: auto;
+        max-width: 100%;
+        padding: 0 20px;
+
+    }
+    #contenido {
+        max-width: 100%;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #formulario, #texto {
+        flex: 1;
+        width: 90%;
+        margin: 10px auto 0;
+        margin-bottom: 10px;
+    }
+
+    #formulario input {
+        width: 100%;
+    }
+}
