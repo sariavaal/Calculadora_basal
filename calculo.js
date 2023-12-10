@@ -1,16 +1,18 @@
-//para que se esperece a que se cargue el dom
+//para que se espere a que se cargue todo el html
 document.addEventListener("DOMContentLoaded", function() {
+    //referencia al elemento del formulario
     let formulario = document.getElementById("calculoForm");
 
     formulario.addEventListener("submit", function(event) {
         // para que no recargue la pagina
         event.preventDefault();
 
-        // peso del usuario
-        let peso = parseFloat(document.getElementById("calcular").value);
+        // peso del usuario obtenido del campo con el id calcular
+        let peso = document.getElementById("calcular").value;
 
-        if (!isNaN(peso)) {  //verificar que sea number
-            // Evaluar el peso y llamar a la función
+        //switch para elegir que funcion usar dependiendo del peso total
+        if (peso) {  
+            // Evaluar el peso y llamar a la función que corresponda
             switch (evaluarPeso(peso)) {
                 case "menorOIgual30":
                     calculoHollidaySegar(peso);
@@ -21,14 +23,17 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     });
-
+    //funciones
+    //funcion para evaluar si el peso es menor o mayor a 30
     function evaluarPeso(peso) {
         return peso <= 30 ? "menorOIgual30" : "mayorQue30";
     }
+    //para los mensajes en pantalla
     function alert(mensaje) {
         document.getElementById("resultadoHidratacion").innerHTML = mensaje;
         document.getElementById("resultadoSuperficieCorporal").innerHTML = "";
     }
+    //funcion hollidaysegar
     const calculoHollidaySegar = function (peso) {
         let volumen;
         if (peso <= 10) {
@@ -43,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let calculoTotal = (mantenimiento * 1.5).toFixed(2);
         alert("Volumen Diario: " + volumen + " cc" + "\n" + "Flujo Horario: " + mantenimiento + " cc/h" + "\n" + "m+m/2: : " + calculoTotal + " cc/h");
     };
-
+//funcion superficie corporal
     const calculoSuperficieCorporal = function (peso) {
         let superficie = ((peso * 4) + 7) / (peso + 90);
         let opcion1 = superficie * 1500;
